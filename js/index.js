@@ -41,6 +41,7 @@ class Apis  {
     }
 
     async displayGames() {
+        document.title = `home`;
         this.loading();
         let response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${this.category}`, {
             method: 'GET',
@@ -94,8 +95,7 @@ class Apis  {
                 'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
             }})
             let data = await response.json();
-            console.log(data);
-
+            document.title = `${data.title}`;
             document.querySelector(`.details .col-md-4`).children[0].src = data.thumbnail;
             elements[0].innerHTML = `title: ${data.title}`;
             elements[1].children[0].innerHTML = data.genre;
@@ -107,7 +107,7 @@ class Apis  {
             this.showDetails();
             this.loading();
             closeBTN.addEventListener(`click`,  _ => {
-                console.log(`hello btn`);
+                document.title = `home`;
                 this.hideDetails();
             });
         })
