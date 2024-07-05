@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/spinners.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <section class="games-list">
+        <header>
+            <img src="images/wraper.png" class="w-100" alt="wallpaper"/>
+        </header>
+
+        <nav class=" navbar navbar-expand-lg position-sticky z-2 top-0 col-lg-9 col-md-6 bg-body-tertiary rounded-5 shadow-lg">
+            <div class="container d-flex justify-content-around align-items-center">
+                <h2 class="h6 text-white navbar-brand text-uppercase m-0" href="#">
+                        <img src="images/logo-sm.png" alt="website logo"/>
+                        <span>game reviews</span>
+                </h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav white my-small ms-auto">
+                          <a class="nav-link text-uppercase active" aria-current="page" href="#">mmorpg</a>
+                          <a class="nav-link text-uppercase" href="#">shooter</a>
+                          <a class="nav-link text-uppercase" href="#">sailing</a>
+                          <a class="nav-link text-uppercase" href="#">permadeath</a>
+                          <a class="nav-link text-uppercase" href="#">superhero</a>
+                          <a class="nav-link text-uppercase" href="#">pixel</a>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+        <main class="container my-5">
+            <section>
+                <div id="gamesContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                </div>
+            </section>
+        </main>
+    </section>
+    <section class="details d-none">
+        <div class="container">
+            <header class="d-flex align-items-center justify-content-between ">
+                <h1 class="h3 py-4">Details Game</h1>
+                <button class="btn-close btn-close-white"></button>
+            </header>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="" alt="game image"/>
+                </div>
+                <div class="col-md-8">
+                    <h3 class="text-capitalize"></h3>
+                    <p>category: <span class="p-1 my-small text-bg-info fw-bold rounded-2"></span></p>
+                    <p>platform: <span class="p-1 my-small text-bg-info fw-bold rounded-2"></span></p>
+                    <p>status: <span class="p-1 my-small text-bg-info fw-bold rounded-2"></span></p>
+                    <p class="small"></p>
+                    <a href="" target="_blank" class="btn btn-outline-warning text-capitalize text-white">show game</a>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+    <div class="loading-container z-3 position-absolute top-0 start-0 bottom-0 end-0 bg-black bg-opacity-75 d-flex align-items-center justify-content-center d-none">
+        <div class="atom-spinner d-none">
+            <div class="spinner-inner">
+              <div class="spinner-line"></div>
+              <div class="spinner-line"></div>
+              <div class="spinner-line"></div>
+              <!--Chrome renders little circles malformed :(-->
+              <div class="spinner-circle">
+                &#9679;
+              </div>
+            </div>
+        </div>
+        <div class="fingerprint-spinner d-none">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <div class="fulfilling-bouncing-circle-spinner d-none">
+            <div class="circle"></div>
+            <div class="orbit"></div>
+          </div>
+          <div class="orbit-spinner d-none">
+            <div class="orbit"></div>
+            <div class="orbit"></div>
+            <div class="orbit"></div>
+          </div>
+          <div class="fulfilling-square-spinner d-none">
+            <div class="spinner-inner"></div>
+          </div>
+          <div class="swapping-squares-spinner d-none" :style="spinnerStyle">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
